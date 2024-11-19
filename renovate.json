@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "platform": "github",
+  "onboarding": true,
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "description": "Run updates only on embedded-bins/Makefile.variables",
+      "matchFileNames": [
+        "embedded-bins/Makefile.variables"
+      ],
+      "enabled": true
+    }
+  ]
+}

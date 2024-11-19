@@ -1,0 +1,25 @@
+{
+    "labels": ["version_bump"],
+    "dependencyDashboard": true,
+    "automerge": false,
+    "separateMinorPatch": true,
+    "prConcurrentLimit": 20,
+    "prHourlyLimit": 20,
+    "customManagers": [
+      {
+        "customType": "regex",
+        "fileMatch": ["^embedded-bins/Makefile.variables$"],
+        "matchStrings": ["alpine_version\\s*=\\s*(?<currentValue>\\S+)"],
+        "depNameTemplate": "alpine",
+        "versioningTemplate": "semver",
+        "datasourceTemplate": "endoflife-date",
+        "packageNameTemplate": "alpine"
+      }
+    ],
+    "customDatasources": {
+      "endoflife-date": {
+        "defaultRegistryUrlTemplate": "https://endoflife.date/api/alpine.json",
+        "format": "json"
+      }
+    }
+  }
