@@ -3,6 +3,12 @@
   "platform": "github",
   "onboarding": true,
   "extends": ["config:base"],
+  "ignorePaths": [
+    "**/*"
+  ],
+  "includePaths": [
+    "embedded-bins/Makefile.variables"
+  ],
   "packageRules": [
     {
       "description": "Run updates only on embedded-bins/Makefile.variables",
@@ -13,3 +19,4 @@
     }
   ]
 }
+
