@@ -5,6 +5,8 @@
     "separateMinorPatch": true,
     "prConcurrentLimit": 20,
     "prHourlyLimit": 20,
+    "excludeCommitPaths": ["**/*"],  // Exclude everything by default
+    "includePaths": ["embedded-bins/Makefile.variables"], // Explicitly include this file
     "customManagers": [
       {
         "customType": "regex",
